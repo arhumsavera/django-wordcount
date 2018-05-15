@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DJ-count</title>
+</head>
+<body>
+	<h1>There are {{count}} words in total</h1>
+	<a href="{% url 'home' %}">Go back</a><br>
+	Original: {{ fulltext}}
+	<br>
+	<h2>Counts of each word:</h2>
+	<br>
+	{%	for k,v in counts %}
+			{{k}}:{{v}}
+			<br>
+	{% endfor%}
+		
+	<a href="{% url 'about' %}">About page</a><br>
+
+</body>
+</html>
